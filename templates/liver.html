@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Liver Disease Prediction</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="prediction-container">
+
+        <h1>🧪 Liver Disease Prediction</h1>
+
+        <p>
+            Enter the patient's health information to assess
+            preliminary liver disease risk.
+        </p>
+
+        <form action="/predict_liver" method="POST">
+
+            <div class="form-group">
+                <label>Age</label>
+                <input type="number" name="age" required>
+            </div>
+
+            <div class="form-group">
+                <label>Gender</label>
+                <select name="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Total Bilirubin</label>
+                <input type="number" step="0.01" name="tot_bilirubin" required>
+            </div>
+
+            <div class="form-group">
+                <label>Direct Bilirubin</label>
+                <input type="number" step="0.01" name="direct_bilirubin" required>
+            </div>
+
+            <div class="form-group">
+                <label>Total Proteins</label>
+                <input type="number" step="0.01" name="tot_proteins" required>
+            </div>
+
+            <div class="form-group">
+                <label>Albumin</label>
+                <input type="number" step="0.01" name="albumin" required>
+            </div>
+
+            <div class="form-group">
+                <label>Albumin / Globulin Ratio</label>
+                <input type="number" step="0.01" name="ag_ratio" required>
+            </div>
+
+            <div class="form-group">
+                <label>SGPT</label>
+                <input type="number" step="0.01" name="sgpt" required>
+            </div>
+
+            <div class="form-group">
+                <label>SGOT</label>
+                <input type="number" step="0.01" name="sgot" required>
+            </div>
+
+            <div class="form-group">
+                <label>Alkaline Phosphatase</label>
+                <input type="number" step="0.01" name="alkphos" required>
+            </div>
+
+            <button type="submit" class="predict-button">
+                Predict Liver Disease
+            </button>
+
+        </form>
+
+        {% if prediction %}
+        <div class="result-box">
+            <h2>Prediction Result</h2>
+            <h3>{{ prediction }}</h3>
+        </div>
+        {% endif %}
+        {% if request.method == "POST" %}
+<div class="details-box">
+
+    <h2>Patient Details</h2>
+
+    <div class="detail-row">
+        <span>Age</span>
+        <strong>{{ request.form.get('age') }}</strong>
+    </div>
+
+    <div class="detail-row">
+        <span>Gender</span>
+        <strong>{{ request.form.get('gender') }}</strong>
+    </div>
+
+    <div class="detail-row">
+        <span>Total Bilirubin</span>
+        <strong>{{ request.form.get('tot_bilirubin') }}</strong>
+    </div>
+
+    <div class="detail-row">
+        <span>Direct Bilirubin</span>
+        <strong>{{ request.form.get('direct_bilirubin') }}</strong>
+    </div>
+
+    <div class="detail-row">
+        <span>Total Proteins</span>
+        <strong>{{ request.form.get('tot_proteins') }}</strong>
+    </div>
+
+    <div class="detail-row">
+        <span>Albumin</span>
+        <strong>{{ request.form.get('albumin') }}</strong>
+    </div>
+
+    <div class="detail-row">
+        <span>Albumin / Globulin Ratio</span>
+        <strong>{{ request.form.get('ag_ratio') }}</strong>
+    </div>
+
+    <div class="detail-row">
+        <span>SGPT</span>
+        <strong>{{ request.form.get('sgpt') }}</strong>
+    </div>
+
+    <div class="detail-row">
+        <span>SGOT</span>
+        <strong>{{ request.form.get('sgot') }}</strong>
+    </div>
+
+    <div class="detail-row">
+        <span>Alkaline Phosphatase</span>
+        <strong>{{ request.form.get('alkphos') }}</strong>
+    </div>
+
+</div>
+{% endif %}
+
+        <br>
+
+        <a href="/" class="back-button">← Back to Home</a>
+
+    </div>
+
+</body>
+
+</html>

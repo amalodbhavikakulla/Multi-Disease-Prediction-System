@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Diabetes EDA</title>
+
+    <!-- EDA Specific CSS -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='eda_style.css') }}">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="eda-header">
+
+        <div class="header-content">
+
+            <div class="page-icon">
+                🩸
+            </div>
+
+            <div>
+
+                <h1>Diabetes Dataset - EDA</h1>
+
+                <p>
+                    Exploratory Data Analysis of the Diabetes Dataset
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <a href="/" class="back-btn">
+            ← Back to Home
+        </a>
+
+    </header>
+
+
+
+    <!-- ================= MAIN CONTAINER ================= -->
+
+    <div class="eda-container">
+
+
+        <!-- ================= SUMMARY CARDS ================= -->
+
+        <div class="summary-grid">
+
+
+            <div class="summary-card">
+
+                <div class="card-icon">
+                    📊
+                </div>
+
+                <h3>Total Records</h3>
+
+                <div class="value">
+                    768
+                </div>
+
+            </div>
+
+
+
+            <div class="summary-card">
+
+                <div class="card-icon">
+                    🔢
+                </div>
+
+                <h3>Input Features</h3>
+
+                <div class="value">
+                    8
+                </div>
+
+            </div>
+
+
+
+            <div class="summary-card">
+
+                <div class="card-icon">
+                    🎯
+                </div>
+
+                <h3>Target Variable</h3>
+
+                <div class="value">
+                    Outcome
+                </div>
+
+            </div>
+
+
+
+            <div class="summary-card">
+
+                <div class="card-icon">
+                    🤖
+                </div>
+
+                <h3>ML Algorithm</h3>
+
+                <div class="value">
+                    Random Forest
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ================= DATASET OVERVIEW ================= -->
+
+        <div class="section-title">
+
+            <h2>Dataset Overview</h2>
+
+            <p>
+                Basic information about the diabetes dataset
+            </p>
+
+        </div>
+
+
+
+        <div class="dataset-box">
+
+            <div class="info-grid">
+
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Dataset Name
+                    </span>
+
+                    <span class="info-value">
+                        Diabetes.csv
+                    </span>
+
+                </div>
+
+
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Number of Rows
+                    </span>
+
+                    <span class="info-value">
+                        768
+                    </span>
+
+                </div>
+
+
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Number of Columns
+                    </span>
+
+                    <span class="info-value">
+                        9
+                    </span>
+
+                </div>
+
+
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Input Features
+                    </span>
+
+                    <span class="info-value">
+                        8
+                    </span>
+
+                </div>
+
+
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Target Column
+                    </span>
+
+                    <span class="info-value">
+                        Outcome
+                    </span>
+
+                </div>
+
+
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Prediction Model
+                    </span>
+
+                    <span class="info-value">
+                        Random Forest
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= FEATURES ================= -->
+
+        <div class="section-title">
+
+            <h2>Dataset Features</h2>
+
+            <p>
+                Input variables used for diabetes prediction
+            </p>
+
+        </div>
+
+
+
+        <div class="features-grid">
+
+
+            <div class="feature-card">
+                <span>01</span>
+                <h3>Pregnancies</h3>
+                <p>Number of pregnancies</p>
+            </div>
+
+
+            <div class="feature-card">
+                <span>02</span>
+                <h3>Glucose</h3>
+                <p>Plasma glucose concentration</p>
+            </div>
+
+
+            <div class="feature-card">
+                <span>03</span>
+                <h3>Blood Pressure</h3>
+                <p>Diastolic blood pressure</p>
+            </div>
+
+
+            <div class="feature-card">
+                <span>04</span>
+                <h3>Skin Thickness</h3>
+                <p>Triceps skin fold thickness</p>
+            </div>
+
+
+            <div class="feature-card">
+                <span>05</span>
+                <h3>Insulin</h3>
+                <p>Serum insulin level</p>
+            </div>
+
+
+            <div class="feature-card">
+                <span>06</span>
+                <h3>BMI</h3>
+                <p>Body Mass Index</p>
+            </div>
+
+
+            <div class="feature-card">
+                <span>07</span>
+                <h3>Diabetes Pedigree</h3>
+                <p>Diabetes hereditary function</p>
+            </div>
+
+
+            <div class="feature-card">
+                <span>08</span>
+                <h3>Age</h3>
+                <p>Age of the patient</p>
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ================= EDA ANALYSIS ================= -->
+
+        <div class="section-title">
+
+            <h2>Exploratory Data Analysis</h2>
+
+            <p>
+                Visual analysis of important patterns and relationships
+            </p>
+
+        </div>
+
+
+
+        <!-- Outcome Distribution -->
+
+        <div class="eda-card">
+
+            <div class="chart-header">
+
+                <div>
+
+                    <span class="chart-number">
+                        01
+                    </span>
+
+                    <h3>
+                        📊 Diabetes Outcome Distribution
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <p class="chart-description">
+
+                This chart shows the distribution of patients
+                with and without diabetes in the dataset.
+
+            </p>
+
+
+            <div class="image-container">
+
+                <img
+                    src="{{ url_for('static',
+                    filename='eda/diabetes_outcome.png') }}"
+                    class="eda-image"
+                    alt="Diabetes Outcome Distribution">
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Glucose Distribution -->
+
+        <div class="eda-card">
+
+            <div class="chart-header">
+
+                <div>
+
+                    <span class="chart-number">
+                        02
+                    </span>
+
+                    <h3>
+                        📈 Glucose Distribution
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <p class="chart-description">
+
+                This visualization helps us understand the glucose
+                levels across patients with different diabetes outcomes.
+
+            </p>
+
+
+            <div class="image-container">
+
+                <img
+                    src="{{ url_for('static',
+                    filename='eda/diabetes_glucose.png') }}"
+                    class="eda-image"
+                    alt="Glucose Distribution">
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Correlation Heatmap -->
+
+        <div class="eda-card">
+
+            <div class="chart-header">
+
+                <div>
+
+                    <span class="chart-number">
+                        03
+                    </span>
+
+                    <h3>
+                        🔥 Correlation Heatmap
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <p class="chart-description">
+
+                The correlation heatmap shows the relationship
+                between different numerical features in the dataset.
+
+            </p>
+
+
+            <div class="image-container">
+
+                <img
+                    src="{{ url_for('static',
+                    filename='eda/diabetes_correlation.png') }}"
+                    class="eda-image"
+                    alt="Diabetes Correlation Heatmap">
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= KEY OBSERVATION ================= -->
+
+        <div class="observation-box">
+
+            <div class="observation-icon">
+                💡
+            </div>
+
+
+            <div>
+
+                <h2>
+                    Key Observation
+                </h2>
+
+                <p>
+
+                    EDA helps us understand the distribution of
+                    diabetes outcomes and identify relationships
+                    between important input features. These insights
+                    help in preparing the dataset before applying
+                    machine learning algorithms.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= BACK BUTTON ================= -->
+
+        <div class="bottom-navigation">
+
+            <a href="/" class="home-btn">
+                ← Back to Home
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="eda-footer">
+
+        <p>
+            Multi-Disease Prediction System
+        </p>
+
+        <span>
+            Diabetes Exploratory Data Analysis
+        </span>
+
+    </footer>
+
+
+</body>
+
+</html>

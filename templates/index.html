@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Multi-Disease Prediction System</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            🧬 AI HealthPredict
+        </div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="#diseases">Diseases</a>
+            <a href="#about">About</a>
+            <a href="/eda">EDA</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="tagline">
+                MACHINE LEARNING • DATA SCIENCE • HEALTHCARE
+            </p>
+
+            <h1>
+                AI-Powered Multi-Disease
+                <span>Prediction System</span>
+            </h1>
+
+            <p class="hero-description">
+                A machine learning based web application for
+                preliminary risk assessment of multiple diseases
+                using patient health information.
+            </p>
+
+            <a href="#diseases" class="main-button">
+                Explore Predictions →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Disease Section -->
+    <section id="diseases" class="disease-section">
+
+        <div class="section-heading">
+
+            <p>OUR PREDICTION MODULES</p>
+
+            <h2>
+                Select a Disease
+            </h2>
+
+            <span>
+                Choose a disease to perform a preliminary
+                machine learning based risk assessment.
+            </span>
+
+        </div>
+
+
+        <div class="disease-container">
+
+
+            <!-- Diabetes Card -->
+            <div class="disease-card">
+
+                <div class="disease-icon diabetes-icon">
+                    🩸
+                </div>
+
+                <h3>
+                    Diabetes
+                </h3>
+
+                <p>
+                    Analyze health parameters such as glucose,
+                    blood pressure, BMI, age and other factors
+                    to assess preliminary diabetes risk.
+                </p>
+
+                <a href="/diabetes" class="card-button">
+                    Predict Diabetes →
+                </a>
+
+            </div>
+
+
+            <!-- Heart Disease Card -->
+            <div class="disease-card">
+
+                <div class="disease-icon heart-icon">
+                    ❤️
+                </div>
+
+                <h3>
+                    Heart Disease
+                </h3>
+
+                <p>
+                    Evaluate important cardiovascular health
+                    parameters to provide a preliminary heart
+                    disease risk assessment.
+                </p>
+
+                <a href="/heart" class="card-button">
+                    Predict Heart Disease →
+                </a>
+
+            </div>
+
+
+            <!-- Liver Disease Card -->
+            <div class="disease-card">
+
+                <div class="disease-icon liver-icon">
+                    🧪
+                </div>
+
+                <h3>
+                    Liver Disease
+                </h3>
+
+                <p>
+                    Use liver-related health parameters and
+                    machine learning to assess preliminary
+                    liver disease risk.
+                </p>
+
+                <a href="/liver" class="card-button">
+                    Predict Liver Disease →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Project Features -->
+    <section class="features-section">
+
+        <div class="section-heading">
+
+            <p>PROJECT TECHNOLOGY</p>
+
+            <h2>
+                How This System Works
+            </h2>
+
+        </div>
+
+
+        <div class="features-container">
+
+            <div class="feature-box">
+
+                <div class="feature-icon">
+                    📊
+                </div>
+
+                <h3>
+                    Data Science
+                </h3>
+
+                <p>
+                    Patient datasets are processed and prepared
+                    for machine learning analysis.
+                </p>
+
+            </div>
+
+
+            <div class="feature-box">
+
+                <div class="feature-icon">
+                    🤖
+                </div>
+
+                <h3>
+                    Machine Learning
+                </h3>
+
+                <p>
+                    Machine learning classification models are
+                    trained using healthcare datasets.
+                </p>
+
+            </div>
+
+
+            <div class="feature-box">
+
+                <div class="feature-icon">
+                    🌐
+                </div>
+
+                <h3>
+                    Flask Web Application
+                </h3>
+
+                <p>
+                    The trained models are integrated into a
+                    user-friendly web application using Flask.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+
+        <div class="about-content">
+
+            <p class="small-title">
+                ABOUT THE PROJECT
+            </p>
+
+            <h2>
+                AI for Preliminary Health Risk Assessment
+            </h2>
+
+            <p>
+                This project demonstrates how Data Science and
+                Machine Learning can be applied to healthcare
+                datasets to develop a multi-disease prediction
+                application.
+            </p>
+
+            <p>
+                The system provides preliminary risk predictions
+                for Diabetes, Heart Disease, and Liver Disease
+                based on user-provided health parameters.
+            </p>
+
+            <div class="technology-list">
+
+                <span>Python</span>
+                <span>Machine Learning</span>
+                <span>Scikit-learn</span>
+                <span>Pandas</span>
+                <span>NumPy</span>
+                <span>Flask</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Disclaimer -->
+    <section class="disclaimer">
+
+        <h3>
+            ⚠️ Important Notice
+        </h3>
+
+        <p>
+            This application is developed for educational and
+            preliminary risk assessment purposes only. It is
+            not intended to replace professional medical advice,
+            diagnosis, or treatment.
+        </p>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 AI-Powered Multi-Disease Prediction System
+        </p>
+
+        <p>
+            M.Sc Data Science Project
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Heart Disease EDA</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='eda_style.css') }}">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="eda-header">
+
+        <div class="header-content">
+
+            <div class="page-icon">
+                ❤️
+            </div>
+
+            <div>
+
+                <h1>Heart Disease Dataset - EDA</h1>
+
+                <p>
+                    Exploratory Data Analysis of the Heart Disease Dataset
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <a href="/" class="back-btn">
+            ← Back to Home
+        </a>
+
+    </header>
+
+
+
+    <!-- ================= MAIN CONTAINER ================= -->
+
+    <div class="eda-container">
+
+
+        <!-- ================= SUMMARY CARDS ================= -->
+
+        <div class="summary-grid">
+
+
+            <div class="summary-card">
+
+                <div class="card-icon">
+                    📊
+                </div>
+
+                <h3>Total Records</h3>
+
+                <div class="value">
+                    303
+                </div>
+
+            </div>
+
+
+
+            <div class="summary-card">
+
+                <div class="card-icon">
+                    🔢
+                </div>
+
+                <h3>Input Features</h3>
+
+                <div class="value">
+                    13
+                </div>
+
+            </div>
+
+
+
+            <div class="summary-card">
+
+                <div class="card-icon">
+                    🎯
+                </div>
+
+                <h3>Target Variable</h3>
+
+                <div class="value">
+                    target
+                </div>
+
+            </div>
+
+
+
+            <div class="summary-card">
+
+                <div class="card-icon">
+                    🤖
+                </div>
+
+                <h3>ML Algorithm</h3>
+
+                <div class="value">
+                    Logistic Regression
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ================= DATASET OVERVIEW ================= -->
+
+        <div class="section-title">
+
+            <h2>Dataset Overview</h2>
+
+            <p>
+                Basic information about the heart disease dataset
+            </p>
+
+        </div>
+
+
+
+        <div class="dataset-box">
+
+            <div class="info-grid">
+
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Dataset Name
+                    </span>
+
+                    <span class="info-value">
+                        Heart_Disease.csv
+                    </span>
+
+                </div>
+
+
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Number of Rows
+                    </span>
+
+                    <span class="info-value">
+                        303
+                    </span>
+
+                </div>
+
+
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Number of Columns
+                    </span>
+
+                    <span class="info-value">
+                        14
+                    </span>
+
+                </div>
+
+
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Input Features
+                    </span>
+
+                    <span class="info-value">
+                        13
+                    </span>
+
+                </div>
+
+
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Target Column
+                    </span>
+
+                    <span class="info-value">
+                        target
+                    </span>
+
+                </div>
+
+
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Prediction Model
+                    </span>
+
+                    <span class="info-value">
+                        Logistic Regression
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= FEATURES ================= -->
+
+        <div class="section-title">
+
+            <h2>Dataset Features</h2>
+
+            <p>
+                Input variables used for heart disease prediction
+            </p>
+
+        </div>
+
+
+
+        <div class="features-grid">
+
+
+            <div class="feature-card">
+                <span>01</span>
+                <h3>Age</h3>
+                <p>Age of the patient</p>
+            </div>
+
+
+            <div class="feature-card">
+                <span>02</span>
+                <h3>Sex</h3>
+                <p>Gender of the patient</p>
+            </div>
+
+
+            <div class="feature-card">
+                <span>03</span>
+                <h3>Chest Pain Type</h3>
+                <p>Type of chest pain</p>
+            </div>
+
+
+            <div class="feature-card">
+                <span>04</span>
+                <h3>Resting Blood Pressure</h3>
+                <p>Resting blood pressure</p>
+            </div>
+
+
+            <div class="feature-card">
+                <span>05</span>
+                <h3>Cholesterol</h3>
+                <p>Serum cholesterol level</p>
+            </div>
+
+
+            <div class="feature-card">
+                <span>06</span>
+                <h3>Fasting Blood Sugar</h3>
+                <p>Fasting blood sugar level</p>
+            </div>
+
+
+            <div class="feature-card">
+                <span>07</span>
+                <h3>Resting ECG</h3>
+                <p>Resting electrocardiographic result</p>
+            </div>
+
+
+            <div class="feature-card">
+                <span>08</span>
+                <h3>Maximum Heart Rate</h3>
+                <p>Maximum heart rate achieved</p>
+            </div>
+
+
+            <div class="feature-card">
+                <span>09</span>
+                <h3>Exercise Induced Angina</h3>
+                <p>Exercise induced chest pain</p>
+            </div>
+
+
+            <div class="feature-card">
+                <span>10</span>
+                <h3>Oldpeak</h3>
+                <p>ST depression induced by exercise</p>
+            </div>
+
+
+            <div class="feature-card">
+                <span>11</span>
+                <h3>Slope</h3>
+                <p>Slope of the peak exercise ST segment</p>
+            </div>
+
+
+            <div class="feature-card">
+                <span>12</span>
+                <h3>CA</h3>
+                <p>Number of major vessels</p>
+            </div>
+
+
+            <div class="feature-card">
+                <span>13</span>
+                <h3>Thal</h3>
+                <p>Thalassemia related feature</p>
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ================= EDA ANALYSIS ================= -->
+
+        <div class="section-title">
+
+            <h2>Exploratory Data Analysis</h2>
+
+            <p>
+                Visual analysis of important patterns and relationships
+            </p>
+
+        </div>
+
+
+
+        <!-- Target Distribution -->
+
+        <div class="eda-card">
+
+            <div class="chart-header">
+
+                <div>
+
+                    <span class="chart-number">
+                        01
+                    </span>
+
+                    <h3>
+                        📊 Heart Disease Target Distribution
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <p class="chart-description">
+
+                This chart shows the distribution of patients
+                with and without heart disease in the dataset.
+
+            </p>
+
+
+            <div class="image-container">
+
+                <img
+                    src="{{ url_for('static',
+                    filename='eda/heart_target.png') }}"
+                    class="eda-image"
+                    alt="Heart Disease Target Distribution">
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Age Distribution -->
+
+        <div class="eda-card">
+
+            <div class="chart-header">
+
+                <div>
+
+                    <span class="chart-number">
+                        02
+                    </span>
+
+                    <h3>
+                        📈 Age Distribution
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <p class="chart-description">
+
+                This visualization shows the distribution of
+                patient age across different heart disease classes.
+
+            </p>
+
+
+            <div class="image-container">
+
+                <img
+                    src="{{ url_for('static',
+                    filename='eda/heart_age.png') }}"
+                    class="eda-image"
+                    alt="Heart Disease Age Distribution">
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Correlation Heatmap -->
+
+        <div class="eda-card">
+
+            <div class="chart-header">
+
+                <div>
+
+                    <span class="chart-number">
+                        03
+                    </span>
+
+                    <h3>
+                        🔥 Correlation Heatmap
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <p class="chart-description">
+
+                The correlation heatmap shows the relationships
+                between numerical features in the heart disease dataset.
+
+            </p>
+
+
+            <div class="image-container">
+
+                <img
+                    src="{{ url_for('static',
+                    filename='eda/heart_correlation.png') }}"
+                    class="eda-image"
+                    alt="Heart Disease Correlation Heatmap">
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= KEY OBSERVATION ================= -->
+
+        <div class="observation-box">
+
+            <div class="observation-icon">
+                💡
+            </div>
+
+
+            <div>
+
+                <h2>
+                    Key Observation
+                </h2>
+
+                <p>
+
+                    EDA helps us understand the distribution of
+                    heart disease cases and identify relationships
+                    between important patient health features.
+                    These insights help in preparing the dataset
+                    before applying machine learning algorithms.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= BACK BUTTON ================= -->
+
+        <div class="bottom-navigation">
+
+            <a href="/" class="home-btn">
+                ← Back to Home
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="eda-footer">
+
+        <p>
+            Multi-Disease Prediction System
+        </p>
+
+        <span>
+            Heart Disease Exploratory Data Analysis
+        </span>
+
+    </footer>
+
+
+</body>
+
+</html>

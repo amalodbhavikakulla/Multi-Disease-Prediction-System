@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Multi-Disease EDA</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='eda_style.css') }}">
+
+</head>
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="eda-header">
+
+    <div class="header-content">
+
+        <div class="page-icon">
+            📊
+        </div>
+
+        <div>
+
+            <h1>Multi-Disease Dataset Analysis</h1>
+
+            <p>
+                Exploratory Data Analysis for the
+                AI-Powered Multi-Disease Prediction System
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <a href="/" class="back-btn">
+        ← Back to Home
+    </a>
+
+</header>
+
+
+<!-- ================= MAIN ================= -->
+
+<div class="eda-container">
+
+
+    <!-- INTRODUCTION -->
+
+    <div class="section-title">
+
+        <h2>Explore Our Datasets</h2>
+
+        <p>
+            Select a disease dataset below to explore its
+            structure, features, distributions and important
+            relationships before machine learning.
+        </p>
+
+    </div>
+
+
+    <!-- SUMMARY -->
+
+    <div class="summary-grid">
+
+
+        <div class="summary-card">
+
+            <div class="card-icon">🩸</div>
+
+            <h3>Diabetes</h3>
+
+            <div class="value">768 Records</div>
+
+            <p>8 Input Features</p>
+
+        </div>
+
+
+        <div class="summary-card">
+
+            <div class="card-icon">❤️</div>
+
+            <h3>Heart Disease</h3>
+
+            <div class="value">303 Records</div>
+
+            <p>13 Input Features</p>
+
+        </div>
+
+
+        <div class="summary-card">
+
+            <div class="card-icon">🧪</div>
+
+            <h3>Liver Disease</h3>
+
+            <div class="value">570 Records</div>
+
+            <p>10 Input Features</p>
+
+        </div>
+
+
+        <div class="summary-card">
+
+            <div class="card-icon">🔍</div>
+
+            <h3>EDA</h3>
+
+            <div class="value">3 Datasets</div>
+
+            <p>Visual Analysis</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- DISEASE SELECTION -->
+
+    <div class="section-title">
+
+        <h2>Disease-wise Exploratory Analysis</h2>
+
+        <p>
+            Choose a disease dataset to view detailed
+            exploratory data analysis.
+        </p>
+
+    </div>
+
+
+    <div class="disease-grid">
+
+
+        <!-- DIABETES -->
+
+        <div class="disease-card">
+
+            <div class="disease-icon">
+                🩸
+            </div>
+
+            <div class="disease-content">
+
+                <span class="disease-tag">
+                    DATASET 01
+                </span>
+
+                <h2>Diabetes Dataset</h2>
+
+                <p>
+                    Explore diabetes patient data including
+                    outcome distribution, glucose levels,
+                    feature analysis and correlation patterns.
+                </p>
+
+                <div class="disease-info">
+
+                    <span>📊 768 Records</span>
+
+                    <span>🔢 8 Input Features</span>
+
+                    <span>🎯 Target: Outcome</span>
+
+                </div>
+
+                <a href="/eda/diabetes"
+                   class="eda-view-btn">
+
+                    View Diabetes EDA
+
+                    <span>→</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- HEART -->
+
+        <div class="disease-card">
+
+            <div class="disease-icon">
+                ❤️
+            </div>
+
+            <div class="disease-content">
+
+                <span class="disease-tag">
+                    DATASET 02
+                </span>
+
+                <h2>Heart Disease Dataset</h2>
+
+                <p>
+                    Explore heart disease patient data including
+                    target distribution, age analysis, important
+                    features and correlation patterns.
+                </p>
+
+                <div class="disease-info">
+
+                    <span>📊 303 Records</span>
+
+                    <span>🔢 13 Input Features</span>
+
+                    <span>🎯 Target: target</span>
+
+                </div>
+
+                <a href="/eda/heart"
+                   class="eda-view-btn">
+
+                    View Heart Disease EDA
+
+                    <span>→</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- LIVER -->
+
+        <div class="disease-card">
+
+            <div class="disease-icon">
+                🧪
+            </div>
+
+            <div class="disease-content">
+
+                <span class="disease-tag">
+                    DATASET 03
+                </span>
+
+                <h2>Liver Disease Dataset</h2>
+
+                <p>
+                    Explore liver disease patient data including
+                    patient distribution, age analysis, bilirubin
+                    levels and feature correlations.
+                </p>
+
+                <div class="disease-info">
+
+                    <span>📊 570 Records</span>
+
+                    <span>🔢 10 Input Features</span>
+
+                    <span>🎯 Target: is_patient</span>
+
+                </div>
+
+                <a href="/eda/liver"
+                   class="eda-view-btn">
+
+                    View Liver Disease EDA
+
+                    <span>→</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- WHAT IS EDA -->
+
+    <div class="section-title">
+
+        <h2>What Does EDA Help Us Understand?</h2>
+
+        <p>
+            Exploratory Data Analysis is performed before
+            machine learning to understand the characteristics
+            and patterns present in the datasets.
+        </p>
+
+    </div>
+
+
+    <div class="process-grid">
+
+
+        <div class="process-card">
+
+            <div class="process-number">
+                01
+            </div>
+
+            <h3>Dataset Structure</h3>
+
+            <p>
+                Understand rows, columns, features
+                and target variables.
+            </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+            <div class="process-number">
+                02
+            </div>
+
+            <h3>Data Distribution</h3>
+
+            <p>
+                Analyze patient records and target
+                class distributions.
+            </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+            <div class="process-number">
+                03
+            </div>
+
+            <h3>Feature Relationships</h3>
+
+            <p>
+                Identify relationships and correlations
+                between important features.
+            </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+            <div class="process-number">
+                04
+            </div>
+
+            <h3>ML Preparation</h3>
+
+            <p>
+                Use EDA insights to prepare the data
+                before applying machine learning.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- BACK -->
+
+    <div class="bottom-navigation">
+
+        <a href="/" class="home-btn">
+            ← Back to Home
+        </a>
+
+    </div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer class="eda-footer">
+
+    <p>
+        AI-Powered Multi-Disease Prediction System
+    </p>
+
+    <span>
+        Exploratory Data Analysis
+    </span>
+
+</footer>
+
+
+</body>
+
+</html>

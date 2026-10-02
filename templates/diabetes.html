@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Diabetes Prediction</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="prediction-page">
+
+        <div class="prediction-header">
+            <div class="page-icon">🩸</div>
+
+            <h1>Diabetes Prediction</h1>
+
+            <p>
+                Enter the patient's health information to assess
+                preliminary diabetes risk.
+            </p>
+        </div>
+
+
+        <div class="form-card">
+
+            <form action="/predict_diabetes" method="POST">
+
+                <div class="form-group">
+                    <label>Pregnancies</label>
+                    <input type="number"
+                           name="Pregnancies"
+                           value="{{ request.form.get('Pregnancies', '') }}"
+                           required>
+                </div>
+
+
+                <div class="form-group">
+                    <label>Glucose</label>
+                    <input type="number"
+                           name="Glucose"
+                           value="{{ request.form.get('Glucose', '') }}"
+                           required>
+                </div>
+
+
+                <div class="form-group">
+                    <label>Blood Pressure</label>
+                    <input type="number"
+                           name="BloodPressure"
+                           value="{{ request.form.get('BloodPressure', '') }}"
+                           required>
+                </div>
+
+
+                <div class="form-group">
+                    <label>Skin Thickness</label>
+                    <input type="number"
+                           name="SkinThickness"
+                           value="{{ request.form.get('SkinThickness', '') }}"
+                           required>
+                </div>
+
+
+                <div class="form-group">
+                    <label>Insulin</label>
+                    <input type="number"
+                           name="Insulin"
+                           value="{{ request.form.get('Insulin', '') }}"
+                           required>
+                </div>
+
+
+                <div class="form-group">
+                    <label>BMI</label>
+                    <input type="number"
+                           step="0.1"
+                           name="BMI"
+                           value="{{ request.form.get('BMI', '') }}"
+                           required>
+                </div>
+
+
+                <div class="form-group">
+                    <label>Diabetes Pedigree Function</label>
+                    <input type="number"
+                           step="0.01"
+                           name="DiabetesPedigreeFunction"
+                           value="{{ request.form.get('DiabetesPedigreeFunction', '') }}"
+                           required>
+                </div>
+
+
+                <div class="form-group">
+                    <label>Age</label>
+                    <input type="number"
+                           name="Age"
+                           value="{{ request.form.get('Age', '') }}"
+                           required>
+                </div>
+
+
+                <button type="submit" class="predict-button">
+                    Predict Diabetes
+                </button>
+
+            </form>
+
+
+            {% if prediction %}
+
+            <div class="result-box">
+
+                <h2>Prediction Result</h2>
+
+                <p>{{ prediction }}</p>
+
+            </div>
+
+            {% endif %}
+            {% if request.method == "POST" %}
+<div class="details-box">
+
+    <h2>Patient Details</h2>
+
+    <div class="detail-row">
+        <span>Pregnancies</span>
+        <strong>{{ request.form.get('Pregnancies') }}</strong>
+    </div>
+
+    <div class="detail-row">
+        <span>Glucose</span>
+        <strong>{{ request.form.get('Glucose') }}</strong>
+    </div>
+
+    <div class="detail-row">
+        <span>Blood Pressure</span>
+        <strong>{{ request.form.get('BloodPressure') }}</strong>
+    </div>
+
+    <div class="detail-row">
+        <span>Skin Thickness</span>
+        <strong>{{ request.form.get('SkinThickness') }}</strong>
+    </div>
+
+    <div class="detail-row">
+        <span>Insulin</span>
+        <strong>{{ request.form.get('Insulin') }}</strong>
+    </div>
+
+    <div class="detail-row">
+        <span>BMI</span>
+        <strong>{{ request.form.get('BMI') }}</strong>
+    </div>
+
+    <div class="detail-row">
+        <span>Diabetes Pedigree Function</span>
+        <strong>{{ request.form.get('DiabetesPedigreeFunction') }}</strong>
+    </div>
+
+    <div class="detail-row">
+        <span>Age</span>
+        <strong>{{ request.form.get('Age') }}</strong>
+    </div>
+
+</div>
+{% endif %}
+
+
+            <a href="/" class="back-link">
+                ← Back to Home
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

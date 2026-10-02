@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Heart Disease Prediction</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="prediction-container">
+
+    <h1>❤️ Heart Disease Prediction</h1>
+
+    <p>
+        Enter the patient's health information
+        to assess preliminary heart disease risk.
+    </p>
+
+    <form action="/predict_heart" method="POST">
+
+       <div class="form-group">
+    <label>Age</label>
+    <input type="number" name="age" required>
+</div>
+
+<div class="form-group">
+    <label>Sex</label>
+    <input type="number" name="sex" required>
+</div>
+
+<div class="form-group">
+    <label>Chest Pain Type</label>
+    <input type="number" name="cp" required>
+</div>
+
+<div class="form-group">
+    <label>Resting Blood Pressure</label>
+    <input type="number" name="trestbps" required>
+</div>
+
+<div class="form-group">
+    <label>Cholesterol</label>
+    <input type="number" name="chol" required>
+</div>
+
+<div class="form-group">
+    <label>Fasting Blood Sugar</label>
+    <input type="number" name="fbs" required>
+</div>
+
+<div class="form-group">
+    <label>Resting ECG</label>
+    <input type="number" name="restecg" required>
+</div>
+
+<div class="form-group">
+    <label>Maximum Heart Rate</label>
+    <input type="number" name="thalach" required>
+</div>
+
+<div class="form-group">
+    <label>Exercise Induced Angina</label>
+    <input type="number" name="exang" required>
+</div>
+
+<div class="form-group">
+    <label>Oldpeak</label>
+    <input type="number" step="0.1" name="oldpeak" required>
+</div>
+
+<div class="form-group">
+    <label>Slope</label>
+    <input type="number" name="slope" required>
+</div>
+
+<div class="form-group">
+    <label>CA</label>
+    <input type="number" name="ca" required>
+</div>
+
+<div class="form-group">
+    <label>Thal</label>
+    <input type="number" name="thal" required>
+</div>
+
+<button type="submit" class="predict-button">
+    Predict Heart Disease
+</button>
+    </form>
+
+
+    {% if prediction %}
+
+    <div class="result-box">
+
+        <h2>Prediction Result</h2>
+
+        <h3>{{ prediction }}</h3>
+
+    </div>
+
+    {% endif %}
+    {% if request.method == "POST" %}
+<div class="details-box">
+
+    <h2>Patient Details</h2>
+
+    <div class="detail-row">
+        <span>Age</span>
+        <strong>{{ request.form.get('age') }}</strong>
+    </div>
+
+    <div class="detail-row">
+        <span>Sex</span>
+        <strong>{{ request.form.get('sex') }}</strong>
+    </div>
+
+    <div class="detail-row">
+        <span>Chest Pain Type</span>
+        <strong>{{ request.form.get('cp') }}</strong>
+    </div>
+
+    <div class="detail-row">
+        <span>Resting Blood Pressure</span>
+        <strong>{{ request.form.get('trestbps') }}</strong>
+    </div>
+
+    <div class="detail-row">
+        <span>Cholesterol</span>
+        <strong>{{ request.form.get('chol') }}</strong>
+    </div>
+
+    <div class="detail-row">
+        <span>Fasting Blood Sugar</span>
+        <strong>{{ request.form.get('fbs') }}</strong>
+    </div>
+
+    <div class="detail-row">
+        <span>Resting ECG</span>
+        <strong>{{ request.form.get('restecg') }}</strong>
+    </div>
+
+    <div class="detail-row">
+        <span>Maximum Heart Rate</span>
+        <strong>{{ request.form.get('thalach') }}</strong>
+    </div>
+
+    <div class="detail-row">
+        <span>Exercise Induced Angina</span>
+        <strong>{{ request.form.get('exang') }}</strong>
+    </div>
+
+    <div class="detail-row">
+        <span>Oldpeak</span>
+        <strong>{{ request.form.get('oldpeak') }}</strong>
+    </div>
+
+    <div class="detail-row">
+        <span>Slope</span>
+        <strong>{{ request.form.get('slope') }}</strong>
+    </div>
+
+    <div class="detail-row">
+        <span>CA</span>
+        <strong>{{ request.form.get('ca') }}</strong>
+    </div>
+
+    <div class="detail-row">
+        <span>Thal</span>
+        <strong>{{ request.form.get('thal') }}</strong>
+    </div>
+
+</div>
+{% endif %}
+
+
+    <br>
+
+    <a href="/">
+        ← Back to Home
+    </a>
+
+</div>
+
+</body>
+
+</html>

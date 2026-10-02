@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Liver Disease EDA</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='eda_style.css') }}">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="eda-header">
+
+        <div class="header-content">
+
+            <div class="page-icon">
+                🧪
+            </div>
+
+            <div>
+
+                <h1>Liver Disease Dataset - EDA</h1>
+
+                <p>
+                    Exploratory Data Analysis of the Liver Disease Dataset
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <a href="/" class="back-btn">
+            ← Back to Home
+        </a>
+
+    </header>
+
+
+
+    <!-- ================= MAIN CONTAINER ================= -->
+
+    <div class="eda-container">
+
+
+        <!-- ================= SUMMARY CARDS ================= -->
+
+        <div class="summary-grid">
+
+
+            <div class="summary-card">
+
+                <div class="card-icon">
+                    📊
+                </div>
+
+                <h3>Total Records</h3>
+
+                <div class="value">
+                    570
+                </div>
+
+            </div>
+
+
+
+            <div class="summary-card">
+
+                <div class="card-icon">
+                    🔢
+                </div>
+
+                <h3>Input Features</h3>
+
+                <div class="value">
+                    10
+                </div>
+
+            </div>
+
+
+
+            <div class="summary-card">
+
+                <div class="card-icon">
+                    🎯
+                </div>
+
+                <h3>Target Variable</h3>
+
+                <div class="value">
+                    is_patient
+                </div>
+
+            </div>
+
+
+
+            <div class="summary-card">
+
+                <div class="card-icon">
+                    🤖
+                </div>
+
+                <h3>ML Algorithm</h3>
+
+                <div class="value">
+                    Machine Learning
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ================= DATASET OVERVIEW ================= -->
+
+        <div class="section-title">
+
+            <h2>Dataset Overview</h2>
+
+            <p>
+                Basic information about the liver disease dataset
+            </p>
+
+        </div>
+
+
+
+        <div class="dataset-box">
+
+            <div class="info-grid">
+
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Dataset Name
+                    </span>
+
+                    <span class="info-value">
+                        Liver_Dataset.csv
+                    </span>
+
+                </div>
+
+
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Number of Rows
+                    </span>
+
+                    <span class="info-value">
+                        570
+                    </span>
+
+                </div>
+
+
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Number of Columns
+                    </span>
+
+                    <span class="info-value">
+                        11
+                    </span>
+
+                </div>
+
+
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Input Features
+                    </span>
+
+                    <span class="info-value">
+                        10
+                    </span>
+
+                </div>
+
+
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Target Column
+                    </span>
+
+                    <span class="info-value">
+                        is_patient
+                    </span>
+
+                </div>
+
+
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Dataset Type
+                    </span>
+
+                    <span class="info-value">
+                        Liver Disease
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= FEATURES ================= -->
+
+        <div class="section-title">
+
+            <h2>Dataset Features</h2>
+
+            <p>
+                Input variables used for liver disease prediction
+            </p>
+
+        </div>
+
+
+
+        <div class="features-grid">
+
+
+            <div class="feature-card">
+                <span>01</span>
+                <h3>Age</h3>
+                <p>Age of the patient</p>
+            </div>
+
+
+            <div class="feature-card">
+                <span>02</span>
+                <h3>Gender</h3>
+                <p>Gender of the patient</p>
+            </div>
+
+
+            <div class="feature-card">
+                <span>03</span>
+                <h3>Total Bilirubin</h3>
+                <p>Total bilirubin level</p>
+            </div>
+
+
+            <div class="feature-card">
+                <span>04</span>
+                <h3>Direct Bilirubin</h3>
+                <p>Direct bilirubin level</p>
+            </div>
+
+
+            <div class="feature-card">
+                <span>05</span>
+                <h3>Total Proteins</h3>
+                <p>Total protein level</p>
+            </div>
+
+
+            <div class="feature-card">
+                <span>06</span>
+                <h3>Albumin</h3>
+                <p>Albumin level</p>
+            </div>
+
+
+            <div class="feature-card">
+                <span>07</span>
+                <h3>Albumin / Globulin Ratio</h3>
+                <p>Albumin to globulin ratio</p>
+            </div>
+
+
+            <div class="feature-card">
+                <span>08</span>
+                <h3>SGPT</h3>
+                <p>Serum glutamic pyruvic transaminase</p>
+            </div>
+
+
+            <div class="feature-card">
+                <span>09</span>
+                <h3>SGOT</h3>
+                <p>Serum glutamic oxaloacetic transaminase</p>
+            </div>
+
+
+            <div class="feature-card">
+                <span>10</span>
+                <h3>Alkaline Phosphatase</h3>
+                <p>Alkaline phosphatase level</p>
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ================= EDA ANALYSIS ================= -->
+
+        <div class="section-title">
+
+            <h2>Exploratory Data Analysis</h2>
+
+            <p>
+                Visual analysis of important patterns and relationships
+            </p>
+
+        </div>
+
+
+
+        <!-- Patient Distribution -->
+
+        <div class="eda-card">
+
+            <div class="chart-header">
+
+                <div>
+
+                    <span class="chart-number">
+                        01
+                    </span>
+
+                    <h3>
+                        📊 Liver Disease Patient Distribution
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <p class="chart-description">
+
+                This chart shows the distribution of patients
+                according to the liver disease target classes.
+
+            </p>
+
+
+            <div class="image-container">
+
+                <img
+                    src="{{ url_for('static',
+                    filename='eda/liver_patient.png') }}"
+                    class="eda-image"
+                    alt="Liver Disease Patient Distribution">
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Age Distribution -->
+
+        <div class="eda-card">
+
+            <div class="chart-header">
+
+                <div>
+
+                    <span class="chart-number">
+                        02
+                    </span>
+
+                    <h3>
+                        📈 Age Distribution
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <p class="chart-description">
+
+                This visualization shows the distribution of
+                patient age across different liver disease classes.
+
+            </p>
+
+
+            <div class="image-container">
+
+               <img src="{{ url_for('static', filename='eda/liver_age.png') }}"
+                    alt="Liver Disease Age Distribution"
+                    class="eda-image">
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Bilirubin Distribution -->
+
+        <div class="eda-card">
+
+            <div class="chart-header">
+
+                <div>
+
+                    <span class="chart-number">
+                        03
+                    </span>
+
+                    <h3>
+                        📈 Bilirubin Distribution
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <p class="chart-description">
+
+                This visualization shows the distribution of
+                total bilirubin levels across liver disease classes.
+
+            </p>
+
+
+            <div class="image-container">
+
+                <img
+                    src="{{ url_for('static',
+                    filename='eda/liver_bilirubin.png') }}"
+                    class="eda-image"
+                    alt="Liver Bilirubin Distribution">
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Correlation Heatmap -->
+
+        <div class="eda-card">
+
+            <div class="chart-header">
+
+                <div>
+
+                    <span class="chart-number">
+                        04
+                    </span>
+
+                    <h3>
+                        🔥 Correlation Heatmap
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <p class="chart-description">
+
+                The correlation heatmap shows the relationships
+                between numerical features in the liver disease dataset.
+
+            </p>
+
+
+            <div class="image-container">
+
+                <img
+                    src="{{ url_for('static',
+                    filename='eda/liver_correlation.png') }}"
+                    class="eda-image"
+                    alt="Liver Disease Correlation Heatmap">
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= KEY OBSERVATION ================= -->
+
+        <div class="observation-box">
+
+            <div class="observation-icon">
+                💡
+            </div>
+
+
+            <div>
+
+                <h2>
+                    Key Observation
+                </h2>
+
+                <p>
+
+                    EDA helps us understand the distribution of
+                    liver disease cases and identify relationships
+                    between important patient health features.
+                    These insights help in preparing the dataset
+                    before applying machine learning algorithms.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= BACK BUTTON ================= -->
+
+        <div class="bottom-navigation">
+
+            <a href="/" class="home-btn">
+                ← Back to Home
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="eda-footer">
+
+        <p>
+            Multi-Disease Prediction System
+        </p>
+
+        <span>
+            Liver Disease Exploratory Data Analysis
+        </span>
+
+    </footer>
+
+
+</body>
+
+</html>

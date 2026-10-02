@@ -1,0 +1,559 @@
+/* =========================================================
+   MULTI-DISEASE EDA - COMMON PROFESSIONAL STYLE
+   Used by Diabetes, Heart Disease, Liver Disease EDA pages
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #1e293b;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.eda-header {
+    background: linear-gradient(135deg, #123c69, #2563eb);
+    color: white;
+    padding: 28px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.page-icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+}
+
+.eda-header h1 {
+    margin: 0 0 8px;
+    font-size: 30px;
+}
+
+.eda-header p {
+    margin: 0;
+    color: #e0ecff;
+    font-size: 15px;
+}
+
+.back-btn {
+    text-decoration: none;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 11px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: white;
+    color: #123c69;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.eda-container {
+    width: 90%;
+    max-width: 1250px;
+    margin: 35px auto;
+}
+
+
+/* =========================================================
+   SECTION TITLES
+========================================================= */
+
+.section-title {
+    margin-top: 38px;
+    margin-bottom: 20px;
+}
+
+.section-title h2 {
+    margin: 0 0 7px;
+    color: #123c69;
+    font-size: 26px;
+}
+
+.section-title p {
+    margin: 0;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   SUMMARY CARDS
+========================================================= */
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.summary-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 7px 22px rgba(15, 23, 42, 0.07);
+    transition: 0.3s;
+}
+
+.summary-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.11);
+}
+
+.card-icon {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.summary-card h3 {
+    margin: 0 0 10px;
+    color: #475569;
+    font-size: 15px;
+}
+
+.summary-card .value {
+    color: #123c69;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.summary-card p {
+    color: #64748b;
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   DATASET OVERVIEW
+========================================================= */
+
+.dataset-box {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 7px 22px rgba(15, 23, 42, 0.07);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 16px 8px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.info-label {
+    color: #64748b;
+    font-weight: 500;
+}
+
+.info-value {
+    color: #123c69;
+    font-weight: 700;
+    text-align: right;
+}
+
+
+/* =========================================================
+   FEATURE CARDS
+========================================================= */
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.feature-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 21px;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-3px);
+    border-color: #93c5fd;
+}
+
+.feature-card > span {
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.feature-card h3 {
+    color: #123c69;
+    margin: 9px 0 7px;
+    font-size: 17px;
+}
+
+.feature-card p {
+    color: #64748b;
+    margin: 0;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   EDA CHART CARDS
+========================================================= */
+
+.eda-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 28px;
+    margin-bottom: 25px;
+    box-shadow: 0 7px 22px rgba(15, 23, 42, 0.07);
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chart-number {
+    display: inline-block;
+    background: #eff6ff;
+    color: #2563eb;
+    padding: 6px 10px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.chart-header h3 {
+    margin: 4px 0 0;
+    color: #123c69;
+    font-size: 21px;
+}
+
+.chart-description {
+    color: #64748b;
+    line-height: 1.7;
+    margin: 15px 0 22px;
+}
+
+.image-container {
+    width: 100%;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+}
+
+.eda-image {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    margin: auto;
+    border-radius: 8px;
+}
+
+
+/* =========================================================
+   OBSERVATION BOX
+========================================================= */
+
+.observation-box {
+    display: flex;
+    gap: 18px;
+    background: linear-gradient(135deg, #eff6ff, #f8fafc);
+    border: 1px solid #bfdbfe;
+    border-radius: 16px;
+    padding: 25px;
+    margin-top: 30px;
+}
+
+.observation-icon {
+    font-size: 30px;
+}
+
+.observation-box h2 {
+    margin: 0 0 8px;
+    color: #123c69;
+}
+
+.observation-box p {
+    margin: 0;
+    color: #475569;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   MAIN EDA - DISEASE SELECTION PAGE
+========================================================= */
+
+.disease-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.disease-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+    transition: 0.3s;
+}
+
+.disease-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.13);
+}
+
+.disease-icon {
+    width: 68px;
+    height: 68px;
+    border-radius: 17px;
+    background: #eff6ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.disease-tag {
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.disease-content h2 {
+    color: #123c69;
+    margin: 8px 0 12px;
+    font-size: 23px;
+}
+
+.disease-content p {
+    color: #64748b;
+    line-height: 1.7;
+    min-height: 85px;
+}
+
+.disease-info {
+    background: #f8fafc;
+    border-radius: 11px;
+    padding: 15px;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.disease-info span {
+    color: #475569;
+    font-size: 14px;
+}
+
+.eda-view-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    background: #123c69;
+    color: white;
+    padding: 14px 17px;
+    border-radius: 9px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.eda-view-btn:hover {
+    background: #2563eb;
+}
+
+.eda-view-btn span {
+    font-size: 21px;
+}
+
+
+/* =========================================================
+   EDA PROCESS CARDS
+========================================================= */
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.process-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+    padding: 23px;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+}
+
+.process-number {
+    color: #2563eb;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.process-card h3 {
+    color: #123c69;
+    margin: 10px 0;
+}
+
+.process-card p {
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/* =========================================================
+   BOTTOM NAVIGATION
+========================================================= */
+
+.bottom-navigation {
+    text-align: center;
+    margin: 35px 0;
+}
+
+.home-btn {
+    display: inline-block;
+    text-decoration: none;
+    background: #123c69;
+    color: white;
+    padding: 13px 24px;
+    border-radius: 9px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.home-btn:hover {
+    background: #2563eb;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.eda-footer {
+    margin-top: 50px;
+    background: #123c69;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+.eda-footer p {
+    margin: 0 0 7px;
+    font-weight: 600;
+}
+
+.eda-footer span {
+    color: #bfdbfe;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .disease-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .eda-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .summary-grid,
+    .features-grid,
+    .process-grid,
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .eda-container {
+        width: 94%;
+    }
+
+    .eda-header h1 {
+        font-size: 23px;
+    }
+
+    .info-item {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .info-value {
+        text-align: left;
+    }
+}
