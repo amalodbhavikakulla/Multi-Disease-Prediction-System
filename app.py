@@ -21,10 +21,6 @@ heart_model = joblib.load("heart_disease_model.pkl")
 # Load Liver Disease model
 liver_model = joblib.load("liver_disease_model.pkl")
 
-# Load Liver Disease feature columns
-liver_features = joblib.load("liver_feature_columns.pkl")
-
-
 # ==========================================
 # HOME PAGE
 # ==========================================
